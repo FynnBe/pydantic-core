@@ -34,7 +34,7 @@ if TYPE_CHECKING:
 else:
     # can't import core_schema.py directly as pydantic-core might not be installed
     core_schema_spec = importlib.util.spec_from_file_location(
-        '_typing', str(THIS_DIR / 'pydantic_core' / 'core_schema.py')
+        '_typing', str(THIS_DIR / 'python' / 'pydantic_core' / 'core_schema.py')
     )
     core_schema = importlib.util.module_from_spec(core_schema_spec)
     core_schema_spec.loader.exec_module(core_schema)
